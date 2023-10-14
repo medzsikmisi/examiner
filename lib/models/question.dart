@@ -5,7 +5,7 @@ class Question {
   String answer;
   String? choice;
   List<String> options;
-  int remainingTime = 5;
+  int remainingTime = 60;
   bool solved = false;
 
   bool get solvable => options.length >= 2;

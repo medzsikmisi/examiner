@@ -6,7 +6,7 @@ import 'package:sophib/services/downloader.dart';
 import 'package:sophib/services/exam_manager.dart';
 
 class HomeController extends GetxController {
-  final TextEditingController code = TextEditingController(text: 'ir0g8s');
+  final TextEditingController code = TextEditingController();
 
   Future<void> onTap() async {
     Get.dialog(

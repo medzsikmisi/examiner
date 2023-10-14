@@ -21,7 +21,8 @@ class ExamManager {
 
   static int get numberOfQuestions => exam.questions.length;
 
-  static int get time => numberOfQuestions * 60;
+  static int get time =>
+      exam.questions.map((e) => e.remainingTime).fold(0, (p, e) => p + e);
 
   static List<Question> get questions => _instance._exam!.questions;
 
