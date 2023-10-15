@@ -4,7 +4,7 @@ Gyakorló program az ICDL vizsgára való felkészüléshez
 
 ## Használat
 
-A release résznél le kell tölteni a .zip fájlt, kicsomagolni, majd futtatni. Ezután kér egy kódot, amit a gyakorlásvezető ad meg a diákoknak.
+Töltsd le a [zip fájlt](https://github.com/medzsikmisi/examiner/releases/latest), csomagold ki, majd futtasd a ".exe" fájlt. Ezután kér egy kódot, amit a gyakorlásvezető ad meg a diákoknak.
 
 ## Kód előállítása
 1. pontosvesszővel elválasztott csv fájl készítése a megadott formátumban
