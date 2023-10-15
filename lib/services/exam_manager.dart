@@ -72,7 +72,7 @@ class ExamManager {
     final input = File(currentExamPath!).openRead();
     final loadedData = await input
         .transform(utf8.decoder)
-        .transform(const CsvToListConverter(fieldDelimiter: '\t'))
+        .transform(const CsvToListConverter(fieldDelimiter: ';'))
         .toList();
     Get.log('Current path: $currentExamPath');
     final title = loadedData.first.first.toString();
