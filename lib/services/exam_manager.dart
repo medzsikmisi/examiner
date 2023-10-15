@@ -3,6 +3,7 @@ import 'dart:io';
 import 'dart:math';
 
 import 'package:csv/csv.dart';
+import 'package:get/get.dart';
 import 'package:sophib/models/exam.dart';
 import 'package:sophib/models/question.dart';
 
@@ -32,15 +33,16 @@ class ExamManager {
   static bool get anyError => exam.questions.any((q) => q.solvable == false);
 
   static setChoice(Question question, String? choice) {
-    _instance._exam!.questions.remove(question);
-    question.choice = choice;
-    _instance._exam!.questions.add(question);
+    Get.log('Updating ${question.question}');
+    if (question.choice == choice) return;
+    final index = _instance._exam!.questions.indexOf(question);
+    _instance._exam!.questions[index].choice = choice;
+    Get.log('$choice set for #$index');
   }
 
   static updateRemainingTime(Question question, int seconds) {
-    _instance._exam!.questions.remove(question);
-    question.remainingTime = seconds;
-    _instance._exam!.questions.add(question);
+    final index = _instance._exam!.questions.indexOf(question);
+    _instance._exam!.questions[index].remainingTime = seconds;
   }
 
   bool isAnyRemainingQuestion() {
@@ -48,15 +50,9 @@ class ExamManager {
   }
 
   static void solveQuestion(Question question) {
-    _instance._exam!.questions.remove(question);
-    question.solved = true;
-    _instance._exam!.questions.add(question);
-  }
-
-  void postponeQuestion(Question question, int remainingTime) {
-    _instance._exam!.questions.remove(question);
-    question.remainingTime = remainingTime;
-    _instance._exam!.questions.add(question);
+    final index = _instance._exam!.questions.indexOf(question);
+    Get.log('Solving $index, final choice: ${question.choice}');
+    _instance._exam!.questions[index].solved = true;
   }
 
   Question? getNextQuestion() {
@@ -78,7 +74,7 @@ class ExamManager {
         .transform(utf8.decoder)
         .transform(const CsvToListConverter(fieldDelimiter: '\t'))
         .toList();
-
+    Get.log('Current path: $currentExamPath');
     final title = loadedData.first.first.toString();
     final questions = <Question>[];
     for (final row in loadedData.sublist(2)) {
@@ -86,7 +82,7 @@ class ExamManager {
           row.sublist(1).map((e) => e.toString()).toList());
       questions.add(question);
     }
-
+    Get.log('Number of questions: ${questions.length}');
     _exam = Exam(title);
     _exam!.questions.addAll(questions);
   }

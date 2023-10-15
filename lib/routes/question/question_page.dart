@@ -88,7 +88,7 @@ class QuestionPage extends StatelessWidget {
           onTap: () {
             controller.selectOption(option);
           },
-          child: Center(child: SelectableText(option)),
+          child: Center(child: Text(option)),
         ),
       ),
     );
