@@ -7,8 +7,8 @@ Gyakorló program az ICDL vizsgára való felkészüléshez
 A release résznél le kell tölteni a .zip fájlt, kicsomagolni, majd futtatni. Ezután kér egy kódot, amit a gyakorlásvezető ad meg a diákoknak.
 
 ## Kód előállítása
-1. csv fájl készítése a megadott formátumban
-2. a fájl feltöltése a [https://catbox.moe/](fájlmegosztó oldalra)
+1. pontosvesszővel elválasztott csv fájl készítése a megadott formátumban
+2. a fájl feltöltése a [fájlmegosztó oldalra](https://catbox.moe/)
 3. alul megjelenik egy hasonló formátumú link: `https://files.catbox.moe/8vjph2.csv`
 4. a linkből ki kell szedni a / jel és a ".csv" közötti részt, ezt kell megadni a vizsgázóknak (jelen esetben ezt: `8vjph2`)
 
@@ -34,3 +34,4 @@ A válaszlehetőségek száma tetszőleges (legalább kettő érték szükséges
 
 ## Vizsgafájl készítése Excelben
 1. megfelelő formátum kialakítása
+2. [mentés `CSV (pontosvesszővel tagolt)` formátumba](https://support.microsoft.com/hu-hu/office/munkaf%C3%BCzet-ment%C3%A9se-sz%C3%B6veges-form%C3%A1tumban-txt-vagy-csv-3e9a9d6c-70da-4255-aa28-fcacf1f081e6)
