@@ -15,6 +15,7 @@ class HomeController extends GetxController {
       ),
       barrierDismissible: false,
     );
+    if(code.text.trim().isEmpty)onError();
     Option<String> result = await Downloader().downloadExamByCode(code.text);
     result.match(() => onError(), (t) => onSuccess(t));
   }
