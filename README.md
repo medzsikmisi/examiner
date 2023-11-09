@@ -10,7 +10,7 @@ Töltsd le a [zip fájlt](https://github.com/medzsikmisi/examiner/releases/lates
 1. pontosvesszővel elválasztott csv fájl készítése a megadott formátumban
 2. a fájl feltöltése a [fájlmegosztó oldalra](https://catbox.moe/)
 3. alul megjelenik egy hasonló formátumú link: `https://files.catbox.moe/8vjph2.csv`
-4. a linkből ki kell szedni a / jel és a ".csv" közötti részt, ezt kell megadni a vizsgázóknak (jelen esetben ezt: `8vjph2`)
+4. a linkből ki kell szedni a / jel és a ".csv" közötti részt, ezt kell megadni a vizsgázóknak (jelen esetben ezt: `hb1rf9`)
 
 
 ## Megfelelő formátum
